@@ -1,19 +1,26 @@
-Create a webpage with a 16x16 grid of square divs
+Add a button on the top of the screen that 
+will send the user a popup asking for 
+the number of squares per side for the new grid.
+
+Once entered, the existing grid should be removed,  
+and a new grid should be generated in the 
+same total space as before.
 
 # Subtasks
 
-Create the divs using JavaScript.
+Set the limit for the user input to a maximum of 100.
 
-It’s best to put your grid squares inside a “container” div. 
-This div can be written in your HTML file.
+Research button tags in HTML and how you can make 
+a JavaScript function run when one is clicked.
 
-Use Flexbox to make the divs appear as a grid 
-(versus just one on each line).
-
-Be careful with borders and margins, 
-as they can adjust the size of the squares!
+Also check out prompts.
 
 // Pseudocode
 
-APPEND square columns into container
-APPEND square boxes into square columns
+SELECT button and store it in a var
+ADD click event on the button
+
+ONCLICK prompt for input
+
+REMOVE all child
+CALL createGrid
