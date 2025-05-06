@@ -8,11 +8,15 @@
     src: url('fonts/3_MinecraftBold1.otf');
 }
 
+
 body {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url("templates/orange-background_23-2147674307.avif");
+    background-size: cover;
 }
 
 .container {
@@ -33,7 +37,8 @@ body {
 .squares {
     flex: 1;
     box-sizing: border-box;
-    outline: 1px solid red;
+    background-color: white;
+    outline: 1px solid black;
 }
 
 .headerText {

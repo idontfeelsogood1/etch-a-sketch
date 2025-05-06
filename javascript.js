@@ -8,7 +8,7 @@ function createGrid(width, height) {
             let div = document.createElement("div");
             div.setAttribute("class", "squares");
             div.addEventListener("mouseenter", () => {
-                div.style.backgroundColor = "blue";
+                div.style.backgroundColor = getRandomColor();
             })
             column.appendChild(div);
         } 
@@ -19,11 +19,26 @@ function createGrid(width, height) {
 function createNewGrid() {
     button = document.querySelector(".btn");
     button.addEventListener("click", () => {
-        let width = prompt("Enter new width");
-        let height = prompt("Enter new height");
+        do {
+            var width = prompt("Enter new width (limit of 100)");
+        } while (width <= 0 || width > 100);
+        
+        do {
+            var height = prompt("Enter new height (limit of 100)");
+        } while (height <= 0 || height > 100);
+
         document.querySelector(".container").innerHTML = "";
         createGrid(width, height);
     })
+}
+
+
+function getRandomColor() {
+	var x = Math.round(0xffffff * Math.random()).toString(16);
+	var y = (6 - x.length);
+	var z = '000000';
+	var z1 = z.substring(0, y);
+	return '#' + z1 + x;
 }
 
 createGrid(16, 16);
